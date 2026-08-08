@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Feather Icons SVG library for scalable, professional icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+
+  <main class="dashboard">
+    <article class="weather-card">
+
+      <header class="card-header">
+        <p class="location">New Delhi, IN</p>
+        <p class="date"><time datetime="2026-08-07">Friday, Aug 7</time></p>
+      </header>
+
+      <section class="current-weather">
+        <div class="temp-group">
+          <!-- Scalable SVG Icon instead of system emoji -->
+          <i data-feather="sun" class="weather-icon aria-hidden="true""></i>
+          <span class="temperature">29<span class="unit">°C</span></span>
+        </div>
+        <p class="condition">Sunny</p>
+      </section>
+
+      <!-- Semantic definitions list for key-value pair metrics -->
+      <dl class="metrics-grid">
+        <div class="metric">
+          <dt><i data-feather="droplet" aria-hidden="true"></i> Humidity</dt>
+          <dd>72%</dd>
+        </div>
+        <div class="metric">
+          <dt><i data-feather="wind" aria-hidden="true"></i> Wind</dt>
+          <dd>15 km/h</dd>
+        </div>
+        <div class="metric">
+          <dt><i data-feather="sunrise" aria-hidden="true"></i> Sunrise</dt>
+          <dd><time datetime="06:02">6:02 AM</time></dd>
+        </div>
+        <div class="metric">
+          <dt><i data-feather="sunset" aria-hidden="true"></i> Sunset</dt>
+          <dd><time datetime="18:47">6:47 PM</time></dd>
+        </div>
+      </dl>
+
+      <section class="forecast-section" aria-labelledby="forecast-heading">
+        <h2 id="forecast-heading">5-Day Forecast</h2>
+        
+        <ol class="forecast-list">
+          <li class="forecast-day">
+            <span class="day-name">Mon</span>
+            <i data-feather="sun" aria-hidden="true"></i>
+            <span class="high-temp">30°</span>
+          </li>
+          <li class="forecast-day">
+            <span class="day-name">Tue</span>
+            <i data-feather="cloud-sun" aria-hidden="true"></i>
+            <span class="high-temp">28°</span>
+          </li>
+          <li class="forecast-day">
+            <span class="day-name">Wed</span>
+            <i data-feather="cloud-rain" aria-hidden="true"></i>
+            <span class="high-temp">24°</span>
+          </li>
+          <li class="forecast-day">
+            <span class="day-name">Thu</span>
+            <i data-feather="cloud" aria-hidden="true"></i>
+            <span class="high-temp">27°</span>
+          </li>
+          <li class="forecast-day">
+            <span class="day-name">Fri</span>
+            <i data-feather="sun" aria-hidden="true"></i>
+            <span class="high-temp">31°</span>
+          </li>
+        </ol>
+      </section>
+
+    </article>
+  </main>
+
+  
+  <script>
+    feather.replace();
+  </script>
+</body>
+</html>
